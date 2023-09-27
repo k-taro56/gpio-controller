@@ -59,6 +59,8 @@ export default function Home() {
             onClick={() => {
               setLeftValue(0.0);
               setRightValue(0.0);
+              sendData('left', 0.0);
+              sendData('right', 0.0);
             }}
           >
             Stop
