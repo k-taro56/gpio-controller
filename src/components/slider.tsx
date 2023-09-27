@@ -10,10 +10,10 @@ const Slider: FC<SliderProps> = ({ value, onChange }) => {
 
   return (
     <div className="relative w-1/2 h-full">
-      <div className="track absolute h-full w-1 bg-gray-300 left-1/2 transform -translate-x-1/2"></div>
+      <div className="track absolute h-full w-4 bg-gray-300 left-1/2 transform -translate-x-1/2"></div>
       {0 <= value ? (
         <div
-          className="highlight absolute w-1 bg-green-500 left-1/2 transform -translate-x-1/2"
+          className="highlight absolute w-4 bg-green-500 left-1/2 transform -translate-x-1/2"
           style={{
             top: `${position}%`,
             bottom: '50%',
@@ -21,7 +21,7 @@ const Slider: FC<SliderProps> = ({ value, onChange }) => {
         ></div>
       ) : (
         <div
-          className="highlight absolute w-1 bg-red-500 left-1/2 transform -translate-x-1/2 translate-y-full"
+          className="highlight absolute w-4 bg-red-500 left-1/2 transform -translate-x-1/2 translate-y-full"
           style={{
             top: `${50 + value / 2}%`,
             bottom: '50%',
@@ -29,7 +29,7 @@ const Slider: FC<SliderProps> = ({ value, onChange }) => {
         ></div>
       )}
       <div
-        className="thumb absolute w-4 h-4 bg-blue-500 rounded-full left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+        className="thumb absolute w-16 h-16 bg-blue-500 rounded-full left-1/2 transform -translate-x-1/2 -translate-y-1/2"
         style={{ top: `calc(${position}% - 0.5rem)` }}
       ></div>
       <input
